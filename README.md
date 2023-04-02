@@ -72,8 +72,6 @@ Khi bạn đã hoàn thành các thay đổi của mình và đã push chúng l�
 Lưu ý rằng đây chỉ là hướng dẫn cơ bản và bạn nên tìm hiểu thêm về Git để sử dụng hiệu quả.
 ```
 
-
-
 ## Validation
 
 ### Syntax
@@ -383,7 +381,5 @@ NotFoundHttpException: được sử dụng khi tài nguyên được yêu cầu
 ```
 
 MethodNotAllowedHttpException: được sử dụng khi phương thức HTTP được sử dụng không được phép cho tài nguyên được yêu cầu. Exception này có thể được kích hoạt bằng cách gọi phương thức abort(405) trong Laravel.
-
-```
 
 ```
