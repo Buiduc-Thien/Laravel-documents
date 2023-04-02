@@ -6,7 +6,9 @@
     - [Validate](#validate)
   - [Query Builder](#query-builder)
     - [Syntax](#syntax-1)
-  - [BadRequestException](#badrequestexception)
+  - [Error Handling](#error-handling)
+    - [Syntax](#syntax-2)
+    - [Exceptions](#exceptions)
 
 ## Validation
 
@@ -192,24 +194,31 @@ orderByDesc(): Phương thức orderByDesc() cho phép bạn sắp xếp dữ li
 limit(): Phương thức limit() cho phép bạn giới hạn số lượng bản ghi trả về từ bảng.
 ```
 
-## BadRequestException
+## Error Handling
 
-```dotnetcli
+### Syntax
+
+```
+throw new BadRequestHttpException('Custom message');
+```
+### Exceptions
+
+```
 ValidationException: được sử dụng khi dữ liệu đầu vào không hợp lệ hoặc không vượt qua các quy tắc kiểm tra dữ liệu. Exception này có thể được kích hoạt bằng phương thức validate() trong các Controller của ứng dụng Laravel.
 ```
 
-```dotnetcli
+```
 BadRequestHttpException: được sử dụng khi yêu cầu của người dùng không hợp lệ hoặc không đúng định dạng. Exception này có thể được kích hoạt bằng cách gọi phương thức abort(400) trong Laravel.
 ```
 
-```dotnetcli
+```
 UnauthorizedHttpException: được sử dụng khi người dùng không có quyền truy cập vào tài nguyên được yêu cầu. Exception này có thể được kích hoạt bằng cách gọi phương thức abort(401) trong Laravel.
 ```
 
-```dotnetcli
+```
 NotFoundHttpException: được sử dụng khi tài nguyên được yêu cầu không tồn tại. Exception này có thể được kích hoạt bằng cách gọi phương thức abort(404) trong Laravel.
 ```
 
-```dotnetcli
+```
 MethodNotAllowedHttpException: được sử dụng khi phương thức HTTP được sử dụng không được phép cho tài nguyên được yêu cầu. Exception này có thể được kích hoạt bằng cách gọi phương thức abort(405) trong Laravel.
 ```
